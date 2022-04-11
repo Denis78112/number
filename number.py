@@ -45,7 +45,47 @@ while (playGame):
                 print('Холодно')
             else:
                 print('Ледяной ветер')
+
             if (countInput == 7):
                 score -= 10
                 if (digit % 2 == 0):
+                    print('Число четное')
+                else:
+                    print('Число не четное')
+            elif (countInput == 6):
+                score -= 8
+                if (digit % 3 ==0):
+                    print('Число делится на 3')
+                else:
+                    print('Число не делится на 3')
+            elif (countInput == 5):
+                score -= 4
+                if (digit % 4 == 0):
+                    print('Число делится на 4')
+                else:
+                    print('Число не делится на 4')
+            elif (countInput > 2 and countInput < 5):
+                score -= 2
+                if (x > digit):
+                    print('Загаданное число меньше вашего')
+                else:
+                    print('Загаданное число меньше вашего')
+            score -= 5
+            countInput += 1
+        print('*' * 40)
+        if (x == digit):
+            print('Победа! Поздравляю!')
+        else:
+            print('Ой, у вас закончались очки. Вы проиграли')
+
+        if (input("Enter - сыграть еще, 0 - выход") == 0):
+            playGame = False
+        else:
+            win = False
+        if (score > maxScore):
+            maxScore = score
+print('*' * 40)
+print("""Спасибо за игру""")
+
+
 
